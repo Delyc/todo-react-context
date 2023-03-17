@@ -5,7 +5,7 @@ export const TodoContext = createContext()
 export const TodoContextProvider = ({ children }) => {
 
     const [name, setName] = useState("")
-    const [list, setList] = useState(() => JSON.parse(localStorage.getItem("list") || []))
+    const [list, setList] = useState(() => JSON.parse(localStorage.getItem("list"))  || [])
     const [isEditing, setIsEditing] = useState(false)
     const [editID, setEditId] = useState(null)
     useEffect(() => {
